@@ -1,4 +1,5 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
+import { rxdb } from 'rxdb/dist/types/plugins/leader-election';
 import { RxdbService } from './services/rxdb/rxdb.service';
 
 @Component({
@@ -6,7 +7,11 @@ import { RxdbService } from './services/rxdb/rxdb.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(private rxbd: RxdbService) {}
+  ngOnInit(): void {
+    this.rxbd.initDatabase();
+  }
+
   name = 'Angular ' + VERSION.major;
 }
