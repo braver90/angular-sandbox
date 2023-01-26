@@ -1,5 +1,5 @@
-import { UserCollection } from './user.schema';
+import * as Collections from './collections/index';
 
 export type DataBaseSchema = {
-  users: UserCollection;
+  users: Collections.users.UserCollection;
 };

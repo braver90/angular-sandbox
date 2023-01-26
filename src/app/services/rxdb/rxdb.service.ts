@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { createRxDatabase, RxCollection, RxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/dexie';
+import { userSchema } from './collections/user.collection';
 import { DataBaseSchema } from './database.schema';
-import { userSchema } from './user.schema';
+
 @Injectable()
 export class RxdbService {
   database: RxDatabase<DataBaseSchema>;
