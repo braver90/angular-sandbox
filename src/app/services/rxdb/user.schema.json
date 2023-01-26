@@ -7,7 +7,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "maxLength": 100 // <- the primary key must have set maxLength
+      "maxLength": 100
     },
     "surname": {
       "type": "string"
