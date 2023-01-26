@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { createRxDatabase, RxDatabase } from 'rxdb';
 import { getRxStorageDexie } from 'rxdb/plugins/dexie';
-import userSchema from './user.schema.json';
+// import userSchema from './user.schema.json';
 @Injectable()
 export class RxdbService {
   database: RxDatabase;
@@ -19,10 +19,10 @@ export class RxdbService {
       cleanupPolicy: {},
     });
 
-    this.database.addCollections({
-      users: {
-        schema: userSchema,
-      },
-    });
+    // this.database.addCollections({
+    //   users: {
+    //     schema: userSchema,
+    //   },
+    // });
   }
 }
